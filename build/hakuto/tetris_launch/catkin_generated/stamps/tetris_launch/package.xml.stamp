@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package>
+  <name>tetris_launch</name>
+  <version>0.1.8</version>
+  <description>Launch files (batch files that start processes and set parameters) for hakuto robots. This package also contains document for the Hakuto ROS package suite. Notes:
+   <ul>
+    <li>Some images included in the instruction to be applied to Gazebo runtime are <a href = "http://l2db.selene.darts.isas.jaxa.jp/index.html.en">publicly provided by JAXA</a>, Japan Aerospace Exploration Agency, for science and educational purposes.</li>
+   </ul>
+  </description>
+
+  <maintainer email="dev@opensource-robotics.tokyo.jp">TORK</maintainer>
+  <license>BSD</license>
+  <author email="534o@opensource-robotics.tokyo.jp">Tokyo Opensource Robotics Programmer 534o</author>
+  <url type="website">http://wiki.ros.org/tetris_launch</url>
+  <url type="repository">https://github.com/tork-a/hakuto</url>
+  <url type="bugtracker">https://github.com/tork-a/hakuto/issues/</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>rosbridge_server</run_depend>
+  <run_depend>teleop_twist_keyboard</run_depend>
+  <run_depend>tetris_gazebo</run_depend>
+
+  <test_depend>rostest</test_depend>
+
+  <export>
+    <rosdoc config="rosdoc.yaml"/> 
+  </export>
+
+</package>

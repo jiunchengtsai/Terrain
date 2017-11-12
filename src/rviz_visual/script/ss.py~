@@ -1,0 +1,67 @@
+#!/usr/bin/env python
+
+import roslib; roslib.load_manifest('visualization_marker_tutorials')
+from visualization_msgs.msg import Marker
+from visualization_msgs.msg import MarkerArray
+from sensor_msgs.msg import Imu
+import rospy
+import math
+import turtlesim.msg
+from geometry_msgs.msg import Point
+
+def callback(data):
+   topic = 'visualization_marker'
+   publisher = rospy.Publisher(topic, Marker,queue_size = 100)
+   count = 0
+   rospy.loginfo("okok")
+   marker = Marker()
+   marker.header.frame_id = "/world"
+   marker.type = marker.SPHERE
+   marker.id = 0
+   marker.action = marker.ADD
+   marker.scale.x = 0.2
+   marker.scale.y = 0.2
+   marker.scale.z = 0.2
+   marker.color.a = 1.0
+   marker.color.r = 1.0
+   marker.color.g = 1.0
+   marker.color.b = 0.0
+   marker.pose.orientation.w = 1.0
+   marker.pose.orientation.x = 1.0
+   marker.pose.orientation.y = 1.0
+   marker.pose.orientation.z = 1.0
+   marker.lifetime = 0
+   rospy.loginfo(str(data.x))
+   rospy.loginfo(str(data.y))
+   marker.pose.position.x = data.x
+   marker.pose.position.y = data.y 
+   marker.pose.position.z = data.z
+
+
+	
+   # We add the new marker to the MarkerArray, removing the oldest
+   # marker from it when necessary
+   #if(count > MARKERS_MAX):
+  #     markerArray.markers.pop(0)
+
+   #markerArray.markers.append(marker)
+
+   # Renumber the marker IDs
+  # id = 0
+ #  for m in markerArray.markers:
+  #     m.id = id
+  #     id += 1
+
+   # Publish the MarkerArray
+   publisher.publish(marker)
+
+   count += 0.01
+
+
+
+
+if __name__ == '__main__' : 
+	rospy.init_node('register')
+  	sub =    rospy.Subscriber('world_position', Point, callback)
+
+	rospy.spin()

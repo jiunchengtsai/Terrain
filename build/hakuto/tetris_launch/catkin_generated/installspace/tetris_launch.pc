@@ -1,0 +1,8 @@
+prefix=/home/vsung/catkin_ws/install
+
+Name: tetris_launch
+Description: Description of tetris_launch
+Version: 0.1.8
+Cflags: 
+Libs: -L/home/vsung/catkin_ws/install/lib 
+Requires: 

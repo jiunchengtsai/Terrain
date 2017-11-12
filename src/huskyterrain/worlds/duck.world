@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<sdf version="1.4">
+    <world name="default">
+      <include>
+        <uri>model://sun</uri>
+      </include>
+      <include>
+        <uri>model://ground_plane</uri>
+      </include>
+      <include>
+        <uri>model://Terrain</uri>
+        <name>duckieTerrain</name>
+        <pose>3 3 0 0 0 0</pose>
+      </include>
+      <include>
+        <uri>model://Terrain</uri>
+        <name>duckieTerrain</name>
+        <pose>3 4 0 0 0 0</pose>
+      </include>
+      <include>
+        <uri>model://Terrain</uri>
+        <name>duckieTerrain</name>
+        <pose>3 2 0 0 0 0</pose>
+      </include>
+      <include>
+        <uri>model://terrain3</uri>
+        <name>duckieTerrain3</name>
+        <pose>3 8.5 0 0 0 0</pose>
+      </include>
+     
+    </world>
+ </sdf>

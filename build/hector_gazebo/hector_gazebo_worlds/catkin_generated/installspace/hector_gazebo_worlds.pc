@@ -1,0 +1,8 @@
+prefix=/home/vsung/catkin_ws/install
+
+Name: hector_gazebo_worlds
+Description: Description of hector_gazebo_worlds
+Version: 0.5.0
+Cflags: 
+Libs: -L/home/vsung/catkin_ws/install/lib 
+Requires: 

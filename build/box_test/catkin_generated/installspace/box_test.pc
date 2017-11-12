@@ -1,0 +1,8 @@
+prefix=/home/vsung/catkin_ws/install
+
+Name: box_test
+Description: Description of box_test
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/vsung/catkin_ws/install/lib 
+Requires: 

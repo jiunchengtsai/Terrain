@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- this launch file corresponds to robot model in ros-pkg/robot_descriptions/pr2/erratic_defs/robots for full erratic -->
+  <arg name = "node_name" default="teleop_twist_keyboard"/>
+  <param name="/use_sim_time" value="true" />
+  <arg name="robot_initial_pose" default="$(optenv ROBOT_INITIAL_POSE)"/>
+
+  <!-- start up wg world -->
+  <!--<include file="$(find gazebo_worlds)/launch/empty_world.launch"/>-->
+  <!--<arg name="world_name" default="worlds/empty.world"/>-->
+  <arg name="world_name" value="$(find wheelbot)/worlds/kk.world"/>
+  <arg name="laser_enabled" default="true"/>
+  <arg name="ur5_enabled" default="false"/>
+  <arg name="kinect_enabled" default="true"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world_name)"/> <!-- world_name is wrt GAZEBO_RESOURCE_PATH environment variable -->
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <arg name="model" default = "$(find wheelbot)/urdf/robot1_base_02.xacro"/>
+  <param name="robot_description" command="$(find xacro)/xacro.py $(arg model)" />
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" ></node> 
+  <!-- start robot state publisher -->
+  <node pkg="robot_state_publisher" type="state_publisher" name="robot_state_publisher" output="screen" >
+    <param name="publish_frequency" type="double" value="50.0" />
+  </node>
+
+  <node name = "$(arg node_name)" pkg = "$(arg node_name)" type="teleop_twist_keyboard.py" output="screen" />
+  <!--<node name="spawn_robot" pkg="gazebo" type="spawn_model" args="-urdf -param robot_description -z 0.1 -model robot_model" respawn="false" output="screen" />-->
+
+
+</launch>
+

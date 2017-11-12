@@ -1,0 +1,8 @@
+prefix=/home/vsung/catkin_ws/devel
+
+Name: rviz_visual
+Description: Description of rviz_visual
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/vsung/catkin_ws/devel/lib 
+Requires: 

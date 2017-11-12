@@ -1,0 +1,8 @@
+prefix=/home/vsung/catkin_ws/devel
+
+Name: demo_ros
+Description: Description of demo_ros
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/vsung/catkin_ws/devel/lib 
+Requires: 

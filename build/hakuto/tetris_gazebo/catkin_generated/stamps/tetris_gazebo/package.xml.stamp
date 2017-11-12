@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package>
+  <name>tetris_gazebo</name>
+  <version>0.1.8</version>
+  <description>This package contains specific ROS simulation setting for hakuto robots. Note:
+   <ul>
+    <li>"models" directory is temporary and should be removed once <a href = "https://bitbucket.org/osrf/gazebo_models/pull-request/124/add-apollo15_landing_site/diff">this pullrequest to gazebo_model</a> gets merged.</li>
+   </ul>
+  </description>
+
+  <maintainer email="iiysaito@opensource-robotics.tokyo.jp">Isaac I.Y. Saito</maintainer>
+  <license>BSD</license>
+  <author email="534o@opensource-robotics.tokyo.jp">Tokyo Opensource Robotics Programmer 534o</author>
+  <url type="website">http://wiki.ros.org/tetris_gazebo</url>
+  <url type="repository">https://github.com/tork-a/hakuto</url>
+  <url type="bugtracker">https://github.com/tork-a/hakuto/issues/</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>gazebo_plugins</build_depend>
+  <run_depend>tetris_description</run_depend>
+  <run_depend>rosbash</run_depend>
+  <run_depend>xacro</run_depend>
+  <run_depend>gazebo_plugins</run_depend>
+  <run_depend>gazebo_ros</run_depend>
+  <run_depend>gazebo_ros_control</run_depend>
+  <run_depend>robot_state_publisher</run_depend>
+
+  <export>
+    <gazebo_ros gazebo_model_path="${prefix}/../tetris_description/models:${prefix}/models" />
+    <gazebo_ros gazebo_media_path="${prefix}/models" />
+  </export>
+
+</package>

@@ -1,0 +1,8 @@
+prefix=/home/vsung/catkin_ws/devel
+
+Name: velodyne_description
+Description: Description of velodyne_description
+Version: 1.0.6
+Cflags: 
+Libs: -L/home/vsung/catkin_ws/devel/lib 
+Requires: 

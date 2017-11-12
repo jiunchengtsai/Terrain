@@ -1,0 +1,8 @@
+prefix=/home/vsung/catkin_ws/devel
+
+Name: jackal_msgs
+Description: Description of jackal_msgs
+Version: 0.5.3
+Cflags: -I/home/vsung/catkin_ws/devel/include
+Libs: -L/home/vsung/catkin_ws/devel/lib 
+Requires: std_msgs message_runtime

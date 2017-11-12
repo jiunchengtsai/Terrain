@@ -1,0 +1,7 @@
+map:
+  road1:
+    right:
+        exposure: 1.1 
+    left:
+        exposure: 1.2
+

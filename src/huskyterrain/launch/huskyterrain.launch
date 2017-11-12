@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+	<arg name = "node_name" default="teleop_twist_keyboard"/>
+	<arg name = "node_name1" default="planning"/>
+	<arg name = "package" default = "huskyterrain"/>
+	<!--include  file = "$(find huskyterrain)/launch/husky_empty_world.launch"/-->
+
+       <!--<node name = "$(arg node_name)" pkg = "$(arg node_name)" type="teleop_twist_keyboard.py" output="screen" />-->
+       <!-- <node name = "$(arg node_name1)" pkg = "$(find huskyterrain)" type="trans.py" output="screen" />-->
+       <node name = "planning_node" pkg = "huskyterrain" type="planning.py" output="screen">
+		<rosparam command="load" file = "$(find huskyterrain)/config/default.yaml"/>
+       </node>
+</launch>
