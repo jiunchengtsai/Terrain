@@ -4,3 +4,6 @@
 [submodule "src/husky"]
 	path = src/husky
 	url = https://github.com/tommyvsfu1/husky.git
+[submodule "src/hakuto"]
+	path = src/hakuto
+	url = https://github.com/tommyvsfu1/hakuto.git
