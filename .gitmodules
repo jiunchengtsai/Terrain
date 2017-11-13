@@ -7,3 +7,6 @@
 [submodule "src/hakuto"]
 	path = src/hakuto
 	url = https://github.com/tommyvsfu1/hakuto.git
+[submodule "src/husky_simulator"]
+	path = src/husky_simulator
+	url = https://github.com/tommyvsfu1/husky_simulator.git
