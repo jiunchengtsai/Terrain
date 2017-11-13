@@ -9,6 +9,7 @@ huskyterrain
 $ catkin_make
 
 $ roslaunch huskyterrain huskycontrol.launch
+
 publish groundtruth
 
 
