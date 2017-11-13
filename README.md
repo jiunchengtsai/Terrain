@@ -2,4 +2,5 @@
 
 $ catkin_make
 
-$ roslaunch huskyterrain control.launch
+
+$ roslaunch huskyterrain huskycontrol.launch
