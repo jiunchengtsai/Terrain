@@ -1,3 +1,0 @@
-[submodule "src/hector_gazebo"]
-	path = src/hector_gazebo
-	url = https://github.com/tommyvsfu1/hector_gazebo.git
