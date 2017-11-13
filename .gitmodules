@@ -1,3 +1,6 @@
 [submodule "src/hector_gazebo"]
 	path = src/hector_gazebo
 	url = https://github.com/tommyvsfu1/hector_gazebo.git
+[submodule "src/husky"]
+	path = src/husky
+	url = https://github.com/tommyvsfu1/husky.git
